@@ -1,0 +1,432 @@
+@import "core/variables";
+@import "core/theme-colors";
+
+:root {
+    --kanban-scrollbar-track: #{lighten($sidebar-scrollbar-thumb-color, 55%)};
+    --kanban-scrollbar-thumb: #{lighten($sidebar-scrollbar-thumb-color, 45%)};
+}
+
+[theme="dark"] {
+    --kanban-scrollbar-track: #{lighten($sidebar-scrollbar-thumb-color, 10%)};
+    --kanban-scrollbar-thumb: #{darken($sidebar-scrollbar-thumb-color, 5%)};
+}
+
+// Step input selector
+.step-input-selector {
+    .step-input {
+        width: 100%;
+        height: 40px;
+        background-color: var(--base-color);
+
+        &:hover {
+            color: $white;
+            background-color: $brand-color;
+        }
+
+        &.selected {
+            color: $white;
+            background-color: $brand-color;
+        }
+
+        &:first-child {
+            border-radius: $default-radius 0 0 $default-radius;
+        }
+
+        &:last-child {
+            border-radius: 0 $default-radius $default-radius 0;
+        }
+    }
+}
+
+// Tags add-edit component
+.tags-organizer {
+    .btn-remove-tag {
+        width: 13px;
+        height: 13px;
+        color: #313131;
+        margin-left: 15px;
+        font-size: inherit;
+        border-radius: 50%;
+        background-color: #f7f7f747;
+        cursor: pointer;;
+    }
+}
+
+// Kanban view design
+.kanban-wrapper {
+    display: flex;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+
+    &.custom-scrollbar {
+        &::-webkit-scrollbar {
+            height: 12px !important;
+        }
+    }
+
+    .kanban-column {
+        width: 250px;
+        min-width: 250px;
+        background-color: var(--base-color);
+        margin-right: .5rem;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        .kanban-draggable-column {
+            overflow-y: auto;
+            height: 600px;
+            //max-height: 600px;
+            //min-height: 300px;
+            padding: 0 5px;
+
+            .draggable-item {
+                cursor: move;
+
+                .card-body {
+                    padding: 1rem !important;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: $default-scrollbar-width;
+                height: $default-scrollbar-width;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: var(--kanban-scrollbar-track);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: var(--kanban-scrollbar-thumb);
+            }
+        }
+
+        .draggable-action-wrapper {
+            padding: 5px;
+            bottom: 0;
+        }
+
+        .text-truncate {
+            padding-bottom: 2px;
+        }
+    }
+
+    .sortable-ghost {
+        opacity: 0.1 !important;
+    }
+
+    //.sortable-chosen {
+    //    opacity: 0.1;
+    //    background-color: lighten($brand-color, 10%) !important;
+    //}
+
+    .stage-header {
+        border-bottom: .5rem solid var(--default-card-bg);
+
+        .stage-information {
+            span {
+                display: flex;
+                font-size: 90%;
+                align-items: center;
+                margin-right: 12px;
+
+                &:before {
+                    content: '';
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    margin-right: 4px;
+                    display: inline-block;
+                    background-color: $text-muted;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .btn-stage-action {
+        width: 100%;
+        //font-size: 90%;
+        display: flex;
+        color: $text-muted;
+        align-items: center;
+        justify-content: center;
+        //padding: 0.2rem 1.2rem;
+        background-color: var(--default-card-bg);
+        transition: color $default-transition-duration $action-transition-timing-function,
+        background-color $default-transition-duration $action-transition-timing-function;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            stroke-width: 1.5;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $brand-color;
+        }
+    }
+}
+
+.add-new-stage {
+    padding: 0 0 .5rem 0;
+
+    .wrapper {
+        width: 250px;
+        min-width: 250px;
+        background-color: var(--base-color);
+    }
+}
+
+// Activity filters and list
+.activity-filter-wrapper {
+    .activity-filtered-result-wrapper {
+        .activity-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--icon-hover-bg);
+        }
+    }
+}
+
+//user profile activity log
+.user-profile-activity-log {
+    .activity-filter-wrapper {
+        .tab-filter-btn {
+            box-shadow: var(--default-box-shadow) !important;
+
+            &.text-primary {
+                &:focus {
+                    box-shadow: var(--default-box-shadow) !important;
+                }
+            }
+        }
+
+        .activity-filtered-result-wrapper {
+            .card {
+                height: initial !important;
+            }
+        }
+    }
+}
+
+// Deal details page
+.deal-details {
+    @media (max-width: 1200px) {
+        .border-right {
+            &.second-border {
+                border: 0 !important;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .border-right {
+            &.first-border {
+                border: 0 !important;
+            }
+        }
+    }
+}
+
+//Tag type Column
+.tags-type-column {
+    width: 150px !important;
+
+    .dropdown {
+        .dropdown-menu {
+            width: 300px;
+        }
+    }
+}
+
+// use this class for badge if text is to long
+.badge-text-truncate {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.badge {
+    span {
+        font-size: 100%;
+    }
+}
+
+.reports-table-divider {
+    margin-right: -30px;
+    margin-left: -30px;
+}
+
+// For dashboard
+.dashboard-badge {
+    background-color: var(--base-color) !important;
+    color: $brand-color !important;
+    height: 40px !important;
+    font-size: 20px;
+    padding: 0.52em 0.95em !important;
+}
+
+.dashboard-circle-widget {
+    .card {
+        padding: 59px 0 !important;
+    }
+}
+
+.dashboard-without-icon-widget {
+    h6 {
+        font-size: 16px !important;
+    }
+}
+
+// Date picker disabled date color - Core
+.vc-text-gray-400 {
+    color: $sidebar-dark-menu-color !important;
+    opacity: .8 !important;
+    cursor: not-allowed !important;
+
+    &:hover {
+        background-color: transparent !important;
+    }
+}
+
+// for date filter calendar view - Override core
+
+@mixin calendar-position {
+    .calendar-root {
+        .calendar {
+            @media (max-width: 991px) {
+                left: 30px !important;
+            }
+            @media (max-width: 575px) {
+                left: 0 !important;
+            }
+            left: 260px !important;
+        }
+    }
+}
+
+.calendar-position-modified {
+    @include calendar-position;
+}
+
+.sidebar-icon-only {
+    .calendar-position-modified {
+        .calendar-root {
+            .calendar {
+                @media (min-width: 992px) {
+                    left: 100px !important;
+                }
+            }
+        }
+    }
+}
+
+.reports, .activities-calendar-view, .kanban-view {
+    .calendar-root {
+        .calendar {
+            @media (max-width: 575px) {
+                left: 0 !important;
+            }
+            left: 15px !important;
+        }
+    }
+}
+
+.search-filter-dropdown {
+    .dropdown {
+        div {
+            &[data-toggle="dropdown"] {
+                margin-bottom: 0 !important;
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
+
+// Time picker dropdown menu position
+.time-picker-dd-pos {
+    .dropdown-menu {
+        left: initial !important;
+        right: 0 !important;
+    }
+
+    .time-picker-input .dropdown .dropdown-menu[x-placement^=bottom-start]:before {
+        left: initial !important;
+        right: 15px !important;
+    }
+}
+
+//Icon size style in deal details
+.person-icon {
+    svg {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+.org-icon {
+    svg {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+.reset-pass-message {
+    font-size: 13px;
+}
+
+//Quick viw modal
+.quick-view-modal {
+    background-color: var(--base-color) !important;
+}
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            .modal {
+                .modal-dialog {
+                    box-shadow: var(--default-box-shadow) !important;
+                }
+            }
+        }
+    }
+}
+
+// Proposal Kanban-View
+.proposal-kanban-view {
+    .kanban-wrapper .kanban-column {
+        width: 320px;
+        min-width: 320px;
+        // background: #f9f9f9;
+        background: #e8e8e8;
+    }
+    .kanban-wrapper .kanban-column .kanban-draggable-column {
+        padding-bottom: 3.2rem !important;
+    }
+    .kanban-wrapper .stage-header {
+        margin-left: 0rem;
+    }
+    .tags-background {
+        background: #fbfbfb;
+        padding: 0.5rem;
+    }
+    .media {
+        overflow: hidden;
+        position: relative;
+    }
+    hr {
+        margin: 0.5rem -1rem 0.1rem;
+    }
+    .draft-bg-color{
+        background-color: #f2ebe3f2 !important;
+    }
+}

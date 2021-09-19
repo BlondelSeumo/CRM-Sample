@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Documentation - Pipex</title>
+        <link rel="shortcut icon" href="images/logo/icon.png"/>
+        <link rel="apple-touch-icon" href="images/logo/icon.png"/>
+        <link rel="apple-touch-icon-precomposed" href="images/logo/icon.png"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/doc.css">
+</head>
+
+<body class="custom-scrollbar">
+<div class="d-none" id="top"></div>
+
+<main class="">
+    <div class="d-flex">
+        <aside>
+            <div class="toggle-sidebar">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div class="doc-left-menus-panel custom-scrollbar">
+                <div class="logo-wrapper">
+                    <img src="images/logo.png" class="img-fluid mx-auto" width="160" alt="">
+                </div>
+
+                <ul class="nav flex-column">
+                    <!--Introduction-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Introduction</a>
+                    </li>
+
+                    <!--Installation-->
+                    <li class="nav-item active">
+                        <a href="installation.html" class="nav-link">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <ul class="sub-list-link-group">
+                            <li>
+                                <a href="#serverRequirement" class="js-page-scrolling">Server requirements</a>
+                            </li>
+                            <li>
+                                <a href="#howToInstall" class="js-page-scrolling">How to Install</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Configuration-->
+                    <li class="nav-item">
+                        <a href="configuration-guide.html" class="nav-link">Configuration</a>
+                    </li>
+
+                    <!--Instruction Guide-->
+                    <li class="nav-item">
+                        <a href="instruction-guide.html" class="nav-link">Instruction Guide</a>
+                    </li>
+                    <li class="nav-item d-none">
+                        <ul class="sub-list-link-group">
+                            <li>
+                                <a href="#dashboard" class="js-page-scrolling">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#leads" class="js-page-scrolling">Leads</a>
+                            </li>
+                            <li>
+                                <a href="#deals" class="js-page-scrolling">Deals</a>
+                            </li>
+                            <li>
+                                <a href="#proposals" class="nav-link js-page-scrolling">Proposal</a>
+                            </li>
+                            <li>
+                                <a href="#activities" class="nav-link js-page-scrolling">Activities</a>
+                            </li>
+                            <li>
+                                <a href="#reports" class="nav-link js-page-scrolling">Reports</a>
+                            </li>
+                            <li>
+                                <a href="#userRoles" class="js-page-scrolling">Users & Roles</a>
+                            </li>
+                            <li>
+                                <a href="#settings" class="js-page-scrolling">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#importingGuideline" class="js-page-scrolling">Importing guidelines</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="developer-guide.html" class="nav-link">Developer Guide</a>
+                    </li>
+                    <!--Upgrade guide-->
+                    <li class="nav-item">
+                        <a href="upgrade-guide.html" class="nav-link">Upgrade Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="change-log.html" class="nav-link">Change Log</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <!--Installation-->
+            <div id="installation" class="mb-5">
+                <h4>Installation</h4>
+                <h5 id="serverRequirement">Server requirements</h5>
+                <ul>
+                    <li>PHP >= 7.4</li>
+                    <li>OpenSSL PHP Extension</li>
+                    <li>PDO PHP Extension</li>
+                    <li>Mbstring PHP Extension</li>
+                    <li>Tokenizer PHP Extension</li>
+                    <li>XML PHP Extension</li>
+                    <li>Ctype PHP Extension</li>
+                    <li>JSON PHP Extension</li>
+                    <li>ZIP PHP Extension</li>
+                    <li>BCMath PHP Extension</li>
+                </ul>
+            </div>
+
+            <!--How to Install-->
+            <div id="howToInstall">
+                <h5>How to install</h5>
+
+                <h6 class="font-weight-bold">How to install in the root directory-</h6>
+                <ol>
+                    <li>Download the zipped file from CodeCanyon.</li>
+                    <li>Upload the zipped file into cPanel / server.</li>
+                    <li>
+                        Unzip the zipped file. Inside the unzipped folder you will get two folders "Documentation" and
+                        "upload"
+                    </li>
+                    <li>
+                        Move all the items from the "upload" folder to the root directory. Please remember to show
+                        hidden files. There are 2 files named .env and .htaccess which are hidden by default. Remember
+                        to move all files.
+                    </li>
+                    <li>
+                        Create the database and remember these things for future usage.
+                        <ul>
+                            <li>Database name</li>
+                            <li>Username</li>
+                            <li>Password</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Go to URL <span style="color:#007bff">your_domain/install/.</span> or <span
+                        style="color:#007bff">your_domain/install</span>. Follow the easy installer procedures step
+                        by step and install the application.
+                    </li>
+                    <li>
+                        Before install the application on you server, you have to generate "Broadcast event" credentials
+                        following this
+                        <a href="configuration-guide.html"> documentation. </a>
+                    </li>
+                    <li>
+                        And Make sure that your email delivery service credentials is correct. Otherwise, you will get
+                        this type of message alert <b>"Configure email setup properly" / "Server error"</b>.
+                    </li>
+                </ol>
+
+                <h6 class="font-weight-bold mt-4">How to install in the sub_folder directory-</h6>
+                <ol>
+                    <li>Download the zipped file from CodeCanyon.</li>
+                    <li>Upload the zipped file into cPanel / server.</li>
+                    <li>
+                        Unzip the zipped file. Inside the unzipped folder you will get two folders "Documentation" and
+                        "upload"
+                    </li>
+                    <li>
+                        Move all the items from the "upload" folder to /root/sub_folder directory. Please remember to
+                        show hidden files. There are 2 files named .env and .htaccess which are hidden by default.
+                        Remember to move all files.
+                    </li>
+                    <li>
+                        Create the database and remember these things for future usage.
+                        <ul>
+                            <li>Database name</li>
+                            <li>Username</li>
+                            <li>Password</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Go to URL <span style="color:#007bff">your_domain/sub_folder/install/.</span> or <span
+                        style="color:#007bff">your_domain/install</span>. Follow the easy installer procedures step
+                        by step and install the application.
+                    </li>
+                    <li>
+                        Before install the application on you server, you have to generate "Broadcast event" credentials
+                        following this
+                        <a href="configuration-guide.html"> documentation. </a>
+                    </li>
+                    <li>
+                        And Make sure that your email delivery service credentials is correct. Otherwise, you will get
+                        this type of message alert <b>"Configure email setup properly" / "Server error"</b>.
+                    </li>
+                </ol>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<a class="js-page-scrolling back-to-top" href="#top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+    </svg>
+</a>
+
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="js/shCore.js" type="text/javascript"></script>
+<script src="js/shAutoloader.js" type="text/javascript"></script>
+<script src="js/shBrushXml.js" type="text/javascript"></script>
+<script src="js/shBrushJScript.js" type="text/javascript"></script>
+<script src="js/shBrushCss.js" type="text/javascript"></script>
+<script src="js/doc.js" type="text/javascript"></script>
+</body>
+</html>

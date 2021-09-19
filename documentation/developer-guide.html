@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8"/>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Documentation - Pipex</title>
+        <link rel="shortcut icon" href="images/logo/icon.png"/>
+        <link rel="apple-touch-icon" href="images/logo/icon.png"/>
+        <link rel="apple-touch-icon-precomposed" href="images/logo/icon.png"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+              integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+              crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/doc.css">
+    </head>
+
+    <body class="custom-scrollbar">
+        <div class="d-none" id="top"></div>
+
+        <main class="">
+            <div class="d-flex">
+                <aside>
+                    <div class="toggle-sidebar">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+
+                    <div class="doc-left-menus-panel custom-scrollbar">
+                        <div class="logo-wrapper">
+                            <img src="images/logo.png" class="img-fluid mx-auto" width="160" alt="">
+                        </div>
+
+                        <ul class="nav flex-column">
+                            <!--Introduction-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Introduction</a>
+                            </li>
+
+                            <!--Installation-->
+                            <li class="nav-item">
+                                <a href="installation.html" class="nav-link">Installation</a>
+                            </li>
+                            <li class="nav-item d-none">
+                                <ul class="sub-list-link-group">
+                                    <li>
+                                        <a href="#serverRequirement" class="js-page-scrolling">Server requirements</a>
+                                    </li>
+                                    <li>
+                                        <a href="#howToInstall" class="js-page-scrolling">How to Install</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!--Configuration-->
+                            <li class="nav-item">
+                                <a href="configuration-guide.html" class="nav-link">Configuration</a>
+                            </li>
+
+                            <!--Instruction Guide-->
+                            <li class="nav-item">
+                                <a href="instruction-guide.html" class="nav-link">Instruction Guide</a>
+                            </li>
+                            <li class="nav-item d-none">
+                                <ul class="sub-list-link-group">
+                                    <li>
+                                        <a href="#dashboard" class="js-page-scrolling">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="#leads" class="js-page-scrolling">Leads</a>
+                                    </li>
+                                    <li>
+                                        <a href="#deals" class="js-page-scrolling">Deals</a>
+                                    </li>
+                                    <li>
+                                        <a href="#proposals" class="nav-link js-page-scrolling">Proposal</a>
+                                    </li>
+                                    <li>
+                                        <a href="#activities" class="nav-link js-page-scrolling">Activities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#reports" class="nav-link js-page-scrolling">Reports</a>
+                                    </li>
+                                    <li>
+                                        <a href="#userRoles" class="js-page-scrolling">Users & Roles</a>
+                                    </li>
+                                    <li>
+                                        <a href="#settings" class="js-page-scrolling">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#importingGuideline" class="js-page-scrolling">Importing guidelines</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a href="developer-guide.html" class="nav-link">Developer Guide</a>
+                            </li>
+                            <!--Upgrade guide-->
+                            <li class="nav-item">
+                                <a href="upgrade-guide.html" class="nav-link">Upgrade Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="change-log.html" class="nav-link">Change Log</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <section class="main-content">
+                    <div id="developerGuide">
+                        <h3 id="developer-guide">Developer Guide</h3>
+
+                        <div>
+                            <h5>Add/Change Language</h5>
+                            <h6 class="font-weight-bold">Update language file</h6>
+                            <ol class="mb-4">
+                                <li>
+                                    Go to the <b>src/resources/lang</b> directory of the application source file.
+                                </li>
+                                <li>
+                                    Add a new directory inside that directory named <b>your_new_language.</b>
+                                    <p class="pln">Like, <b>custom</b></p>
+                                </li>
+                                <li>
+                                    Make changes into <b>default.php</b> file from the new directory.<br/>
+                                </li>
+                                <li>
+                                    <b>default.php</b> return an array with your lang file element.<br>
+                                </li>
+                                <li>
+                                    You can add bellow element in <b>default.php</b> with your lang file element.
+                                    <p>
+                                        <code>
+                                            return [
+                                            'lang' => 'Custom',
+                                            'lang_short' => 'custom',
+                                            ];
+                                        </code>
+                                    </p>
+                                </li>
+                                <li>
+                                    If you want to include more php lang file then
+                                    You can include others php file in <b>default.php</b>
+                                    <p>
+                                        <code>
+                                            return array_merge ([
+
+                                            ], include example.php);
+                                        </code>
+                                    </p>
+                                </li>
+                                <br/>
+                            </ol>
+                            <h6 class="font-weight-bold mb-4">
+                                N.B.: <br>
+                                If you would like to change any language, please copy the text from default.php
+                                to custom.php.<br>
+                                Please note, we may replace all other files except the custom.php in future updates.
+                            </h6>
+                            <h6 class="font-weight-bold">Language setting</h6>
+                            <ol>
+                                <li>Go to Settings > General from admin panel.</li>
+                                <li>Select your preferred language from the Language section.</li>
+                                <li>Save the changes.</li>
+                                <li>After any change, please remember to clear cache from the Internet Browser.</li>
+                            </ol>
+                        </div>
+
+                        <h5 class="font-weight-bold">How to install Locally</h5>
+                        <ol>
+                            <li>
+                                <h6>Make sure you have met our server requirements.</h6>
+                            </li>
+                            <li>
+                                <h6>Make sure that node.js and composer are installed in your local environment.</h6>
+                            </li>
+                            <li>
+                                <h6>Download the zipped file from CodeCanyon.</h6>
+                            </li>
+                            <li>
+                                <h6>Unzip the zipped file. Inside the unzipped folder you will get two folders "Documentation" and "upload"</h6>
+                            </li>
+                            <li>
+                                <h6>Move all the items from the "upload" folder to local directory from where you want to run the application</h6>
+                            </li>
+                            <li>
+                                <h6>Open the folder in the Editor (phpstorm, vscode etc.)</h6>
+                            </li>
+                            <li>
+                                <h6>Update <code>webpack.mix.js</code> as</h6>
+                                <code>
+                                    <pre>
+<code>
+<span class="hljs-keyword">const</span>
+mix = require(<span class="hljs-string">"laravel-mix"</span>);
+<span class="hljs-comment">
+/*
+|--------------------------------------------------------------------------
+| Mix Asset Management
+|--------------------------------------------------------------------------
+|
+| Mix provides a clean, fluent API for defining some Webpack build steps
+| for your Laravel application. By default, we are compiling the Sass
+| file for the application as well as bundling up all the JS files.
+|
+*/
+</span>
+
+mix.setPublicPath(<span class="hljs-string">"./"</span>)
+.setResourceRoot(<span class="hljs-string">"../"</span>) <span class="hljs-comment">// Turns assets paths in css relative to css file</span>
+    <span class="hljs-comment">// .options({</span>
+    <span class="hljs-comment">//     processCssUrls: false,</span>
+    <span class="hljs-comment">// })</span>
+    .sass(<span class="hljs-string">"src/resources/sass/core/core.scss"</span>, <span class="hljs-string">"css/core.css"</span>)
+    .sass(<span class="hljs-string">"node_modules/dropzone/src/dropzone.scss"</span>, <span
+    class="hljs-string">"css/dropzone.css"</span>)
+    .sass(<span class="hljs-string">"src/resources/sass/_global.scss"</span>, <span class="hljs-string">"css/fontawesome.css"</span>)
+    .js(<span class="hljs-string">"src/resources/js/mainApp.js"</span>, <span
+    class="hljs-string">"js/core.js"</span>)
+.extract([
+    <span class="hljs-comment">// Extract packages from node_modules to vendor.js</span>
+    <span class="hljs-string">"jquery"</span>,
+    <span class="hljs-string">"bootstrap"</span>,
+    <span class="hljs-string">"popper.js"</span>,
+    <span class="hljs-string">"axios"</span>,
+    <span class="hljs-string">"sweetalert2"</span>,
+    <span class="hljs-string">"lodash"</span>
+])
+.sourceMaps();
+mix.webpackConfig({
+    resolve: {
+    alias: {
+        <span class="hljs-string">"@app"</span>: path.resolve(__dirname, <span class="hljs-string">"src/resources/js/crm/"</span>),
+        <span class="hljs-string">"@core"</span>: path.resolve(__dirname, <span class="hljs-string">"src/resources/js/core/"</span>)
+        }
+    }
+});
+<span class="hljs-keyword">if</span> (mix.inProduction()) {
+    mix.version().options({
+        <span class="hljs-comment">// Optimize JS minification process</span>
+        terser: {
+        cache: <span class="hljs-keyword">true</span>,
+        parallel: <span class="hljs-keyword">true</span>,
+        sourceMap: <span class="hljs-keyword">true</span>
+    }
+});}
+<span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// Uses inline source-maps on development</span>
+    mix.webpackConfig({
+    devtool: <span class="hljs-string">"inline-source-map"</span>,
+    });
+}
+</code></pre>
+                                </code>
+                            </li>
+                            <li><p>Move <code>src\package.json</code> One folder up.</p>
+                            </li>
+                            <li>
+                                <p>Replace line No.3 of <code>src\resources\core\core.scss</code> file with this line</p>
+                                    <span></span>@<span class="hljs-function"><span class="hljs-keyword">import</span> <span
+                                    class="hljs-title">url</span><span class="hljs-params">(<span class="hljs-string">"../../../../node_modules/nouislider/distribute/nouislider.min.css"</span>)</span></span>;
+                            </li><br>
+                            <li>
+                                Run bellow commands<br>
+                                <code>npm <span class="hljs-keyword">install</span>
+                                </code><br>
+                                <code>composer <span class="hljs-keyword">install</span>
+                                </code><br>
+                                <code>npm <span class="hljs-keyword">run</span><span class="bash"> dev</span>
+                                </code><br>
+                            </li><br>
+                            <li>
+                                <p>Create a local database from phpmyadmin.</p>
+                            </li>
+                            <li>
+                                <p>Update the database credentials in the .env file.</p>
+                                <p>
+                                    <span class="hljs-attr">DB_CONNECTION</span>=mysql<br>
+                                    <span class="hljs-attr">DB_HOST</span>=127.0.0.1/localhost<br>
+                                    <span class="hljs-attr">DB_PORT</span>=3306<br>
+                                    <span class="hljs-attr">DB_DATABASE</span>=your_database_name<br>
+                                    <span class="hljs-attr">DB_USERNAME</span>=your_database_user_name<br>
+                                    <span class="hljs-attr">DB_PASSWORD</span>=your_database_password<br>
+                                </p>
+                            </li>
+                            <li>
+                                <p>After configure your database credentials. You have to run</p>
+                                <p>
+                                    <span class="hljs-attr">php artisan optimize:clear</span><br>
+                                    <span class="hljs-attr">php artisan migrate:fresh --seed</span><br>
+                                    <span class="hljs-attr">php artisan db:demo</span><br>
+                                </p>
+                            </li>
+                            <li>
+                                <p>And Navigate to <code>src</code> folder in command line and run</p>
+                                <span class="hljs-attr">php artisan storage:link</span><br>
+                            </li><br>
+                            <li>
+                                <p>Open terminal and run</p>
+                                <span class="hljs-attr">php artisan serve</span><br>
+                            </li><br>
+                            <li>
+                                <p>Then you will get a URL in terminal: ex (http://127.0.0.1:8000)</p>
+                            </li>
+                            <li>
+                                <p>Copy the URL from the terminal and paste the URL into the browser</p>
+                            </li>
+                            <li>
+                                <p>After that, complete the installation process. You should be able to use it locally</p>
+                            </li>
+                            <li>
+                                <h5 id="to-add-new-vue-component">To add new vue component</h5>
+                                <ul>
+                                    <li>To add vue component navigate to <code>src\reources\js\crm\Component\Views</code></li>
+                                    <li>register vue component in <code>src\reources\js\crm\crmComponent.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h5 id="to-add-new-route">To add new route</h5>
+                                <ul>
+                                    <li>Navigate to <code>src\routes</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h5 id="to-add-new-lang">To add new lang</h5>
+                                <ul>
+                                    <li>navigate to <code>src\resources\lang</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h5 id="to-add-new-blade">To add new blade</h5>
+                                <ul>
+                                    <li>navigate to <code>src\resources\views</code></li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <a class="js-page-scrolling back-to-top" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+        </a>
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+                crossorigin="anonymous"></script>
+        <script src="js/shCore.js" type="text/javascript"></script>
+        <script src="js/shAutoloader.js" type="text/javascript"></script>
+        <script src="js/shBrushXml.js" type="text/javascript"></script>
+        <script src="js/shBrushJScript.js" type="text/javascript"></script>
+        <script src="js/shBrushCss.js" type="text/javascript"></script>
+        <script src="js/doc.js" type="text/javascript"></script>
+    </body>
+</html>

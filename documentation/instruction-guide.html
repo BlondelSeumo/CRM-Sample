@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8"/>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Documentation - Pipex</title>
+        <link rel="shortcut icon" href="images/logo/icon.png"/>
+        <link rel="apple-touch-icon" href="images/logo/icon.png"/>
+        <link rel="apple-touch-icon-precomposed" href="images/logo/icon.png"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+              integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+              crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/doc.css">
+    </head>
+
+    <body class="custom-scrollbar">
+        <div class="d-none" id="top"></div>
+
+        <main>
+            <div class="d-flex">
+                <aside>
+                    <div class="toggle-sidebar">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+
+                    <div class="doc-left-menus-panel custom-scrollbar">
+                        <div class="logo-wrapper">
+                            <img src="images/logo.png" class="img-fluid mx-auto" width="160" alt="">
+                        </div>
+
+                        <ul class="nav flex-column">
+                            <!--Introduction-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Introduction</a>
+                            </li>
+
+                            <!--Installation-->
+                            <li class="nav-item">
+                                <a href="installation.html" class="nav-link">Installation</a>
+                            </li>
+                            <li class="nav-item d-none">
+                                <ul class="sub-list-link-group">
+                                    <li>
+                                        <a href="#serverRequirement" class="js-page-scrolling">Server requirements</a>
+                                    </li>
+                                    <li>
+                                        <a href="#howToInstall" class="js-page-scrolling">How to Install</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!--Configuration-->
+                            <li class="nav-item">
+                                <a href="configuration-guide.html" class="nav-link">Configuration</a>
+                            </li>
+
+                            <!--Instruction Guide-->
+                            <li class="nav-item active">
+                                <a href="instruction-guide.html" class="nav-link">Instruction Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <ul class="sub-list-link-group">
+                                    <li class="active">
+                                        <a href="#dashboard" class="js-page-scrolling">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="#leads" class="js-page-scrolling">Leads</a>
+                                    </li>
+                                    <li>
+                                        <a href="#deals" class="js-page-scrolling">Deals</a>
+                                    </li>
+                                    <li>
+                                        <a href="#proposals" class="js-page-scrolling">Proposal</a>
+                                    </li>
+                                    <li>
+                                        <a href="#activities" class="js-page-scrolling">Activities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#reports" class="js-page-scrolling">Reports</a>
+                                    </li>
+                                    <li>
+                                        <a href="#userRoles" class="js-page-scrolling">Users & Roles</a>
+                                    </li>
+                                    <li>
+                                        <a href="#settings" class="js-page-scrolling">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#importingGuideline" class="js-page-scrolling">Importing guidelines</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="developer-guide.html" class="nav-link">Developer Guide</a>
+                            </li>
+                            <!--Upgrade guide-->
+                            <li class="nav-item">
+                                <a href="upgrade-guide.html" class="nav-link">Upgrade Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="change-log.html" class="nav-link">Change Log</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <section class="main-content">
+                    <!--Dashboard-->
+                    <div id="dashboard" class="scrollspy-section mb-5">
+                        <h4>Dashboard</h4>
+                        <p>View an overview of your application here. You can,</p>
+                        <ul>
+                            <li>View a chart for an overview of your <em>Deals</em>.</li>
+                            <li>View a pie chart of your Open, <em>Won</em> and <em>Lost Deals</em>.</li>
+                            <li>View total number of your <em>Leads</em>.</li>
+                            <li>View total number of your <em>Employees</em>.</li>
+                            <li>View total number of <em>Sent</em> and <em>Accepted Proposals</em>.</li>
+                            <li>View Rate of Sending and Acceptance of the <em>Proposals</em>.</li>
+                            <li>View how many <em>Pipelines</em> do you have.</li>
+                            <li>View how many <em>Deals</em> are on your individual <em>Pipeline</em>.</li>
+                            <li>And view your top 5 <em>Owners</em>.</li>
+                        </ul>
+                        <img src="images/dashboard.jpg" class="img-thumbnail" alt="">
+                    </div>
+
+                    <!--Leads-->
+                    <div id="leads" class="scrollspy-section mb-5">
+                        <div>
+                            <h4>Leads</h4>
+                            <p>
+                                Here you can see and manage all your business leads. A Lead can be a <em>People</em> or an <em>Organization</em>
+                                with
+                                whom you make deals for your business. You can create a <em>Lead Type</em> and Add
+                                <em>People</em>
+                                or <em>Organization</em>
+                                under that <em>Lead Type</em>.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5>People</h5>
+                            <p>
+                                Here you can see and manage all your <em>People</em> type <em>Leads</em>. People are one type of
+                                Lead of your
+                                business. This is a single person with whom you may have business relationships.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--Deal-->
+                    <div id="deals" class="scrollspy-section mb-5">
+                        <div>
+                            <h4>Deals</h4>
+                            <p>
+                                The business contract or communication that you have with one or more of your <em>Leads</em> is
+                                a
+                                <em>Deal</em>. In
+                                this module the system allows you to manage All your <em>Deals</em>. You can Add a <em>Deal</em>,
+                                Add a <em>Pipeline</em>, view
+                                and manage the <em>Deals</em> in the <em>Pipelines</em> and Add a reason if a <em>Deal</em> is
+                                lost.
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5>Deals View</h5>
+                            <p>
+                                Here you can see and manage all your <em>Deals</em> in a Table with Status, <em>Deal</em> Value,
+                                <em>Organization</em> the deal
+                                with, <em>People</em> the deal with <em>Owner</em> of the <em>Deal</em> and <em>Tags</em>. The
+                                table data can be filtered with different
+                                Filters like <em>Owner, Type, Status, Tags</em> etc.
+                            </p>
+                            <img src="images/deal.jpg" class="img-thumbnail" alt="">
+                        </div>
+
+                        <div class="mb-4">
+                            <h5>Deals Card View</h5>
+                            <p>
+                                Here you can see and manage all your <em>Deals</em> in card view with Status, <em>Deal</em> Value,
+                                <em>Organization</em> the deal
+                                with, <em>People</em> the deal with <em>Owner</em> of the <em>Deal</em> and <em>Tags</em>. The
+                                card data can be filtered with different
+                                Filters like <em>Owner, Type, Status, Tags</em> etc.
+                            </p>
+                            <img src="images/deal-card-view.png" class="img-thumbnail" alt="">
+                        </div>
+
+                        <div class="mb-4">
+                            <h5>Deals Discussion Board</h5>
+                            <p>
+                                Here you can see and manage your <em>Deal</em> in deal discussion modal, <em>Deal</em> Value,
+                                <em>Lead and Contact person of</em> the deal, the deal with
+                                <em>Owner</em> of the <em>Deal</em> and <em>Tags</em> etc. You can also comment here.
+                            </p>
+                            <img src="images/deal-discussion.png" class="img-thumbnail" alt="">
+                        </div>
+
+                        <div>
+                            <h5>Pipeline</h5>
+                            <p>
+                                It is a responsive <em><b>Kanban</b></em> view where you can manage your <em>Deals</em> in a
+                                better visualized way.
+                            </p>
+                            <img src="images/kanban_view.jpg" class="img-thumbnail mb-3" alt="">
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Add a <em>Pipeline</em> with a different no of stages and stage name.</li>
+                                <li>
+                                    In the <em>Pipeline</em> view, all deals are visible and manage the stage of the
+                                    <em>Deals</em> very easily,
+                                    Add an Activity directly to the <em>Deal</em>, Edit, Mark and Manage its Tag
+                                </li>
+                            </ul>
+                            <img src="images/add_pipeline.jpg" class="img-thumbnail" alt="">
+                        </div>
+                    </div>
+
+                    <!--Proposals-->
+                    <div id="proposals" class="scrollspy-section mb-5">
+                        <div>
+                            <h4>Proposals</h4>
+                            <p>
+                                Here you can manage all your business <em>Proposals</em> like Create a <em>template</em> and
+                                Send <em>Proposals</em>. A
+                                Business <em>Proposal</em> is a written formal document to a prospective lead
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5>Proposal List</h5>
+                            <p>
+                                Manage all your Proposals from here. The data table will show you the <em>Status</em>, if <em>Accepted</em>,
+                                of which <em>Deal</em>, etc. Filter the table data
+                            </p>
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Create and Send a <em>Proposal</em> directly</li>
+                                <li>Check the status of your proposals</li>
+                                <li>Accept them with a simple toggle button</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <h5>Templates</h5>
+                            <p>
+                                Create Templates which you can use to send Proposals and view them and edit them if required
+                                from here.
+                            </p>
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Add and Edit any <em>Template</em></li>
+                                <li>Duplicate them per requirement</li>
+                                <li>Add the <em>Template</em> directly to a <em>Proposal</em></li>
+                                <li>Download the template as HTML for using elsewhere</li>
+                            </ul>
+                            <img src="images/proposal.jpg" class="img-thumbnail" alt="">
+                        </div>
+
+                        <div class="mb-4">
+                            <h5>Proposals Kanban view</h5>
+                            <p>
+                                Here you can see and manage all your <em>Proposals</em> in kanban view with Status. The
+                                kanban view data can be filtered with different
+                                Filters like <em>Owner, Tags, Created date</em> etc.
+                            </p>
+                            <img src="images/proposal-kanban-view.png" class="img-thumbnail" alt="">
+                        </div>
+                    </div>
+
+                    <!--Activities-->
+                    <div id="activities" class="scrollspy-section mb-5">
+                        <div>
+                            <h4>Activities</h4>
+                            <p>
+                                All your Activities related to a <em>Deal</em> or a <em>Lead</em> you can view and manage from
+                                here. An <em>Activity</em> can
+                                be of different types, <em>Call, Meeting, Email, Task,</em> etc.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5>Calendar view</h5>
+                            <p>
+                                View all your <em>Activities</em> in a Calendar view. Add an Activity, Filter them with
+                                different
+                                filters, easily search your activities. Change the calendar view by Month, Week or Day.
+                            </p>
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Add an <em>Activity</em> with the “Add Activity” button directly.</li>
+                                <li>Add an Activity from the calendar to a specific day or time.</li>
+                                <li>Simple edit by clicking on the <em>Activity</em> from the calendar view</li>
+                            </ul>
+                            <img src="images/activity_calendar.jpg" class="img-thumbnail mb-4" alt="">
+                        </div>
+
+                        <div>
+                            <h5>List view</h5>
+                            <p>
+                                View all you <em>Activities</em> in a list view under a table view from you. Edit or Delete the
+                                <em>Activities</em> from the table. Filter the data of the table with different filters like
+                                <em>Schedule,
+                                    Owner</em>, if the <em>Activity</em> is with a <em>Deal, Person</em> or an
+                                <em>Organization</em>.
+                            </p>
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Add, Edit or Delete an <em>Activity</em></li>
+                                <li>Mark them if they are <em>Done</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Report-->
+                    <div id="reports" class="scrollspy-section mb-5">
+                        <div>
+                            <h4>Reports</h4>
+                            <p>
+                                You can view a few types of reports.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5>Deal</h5>
+                            <p>
+                                View <em>Deal Owners</em> performance report here.
+                            </p>
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Filter data according to <em>Won</em> or <em>Lost</em>.</li>
+                                <li>Filter data according to your <em>Pipelines</em>.</li>
+                                <li>View Several information from data table</li>
+                            </ul>
+                            <img src="images/deal_report.jpg" class="img-thumbnail mb-4" alt="">
+                        </div>
+
+                        <div>
+                            <h5>Proposal</h5>
+                            <p>
+                                View <em>Proposal Owners</em> performance report here.
+                            </p>
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Filter data according to <em>Pipelines</em>.</li>
+                                <li>Filter data according to <em>Send Proposal</em> and <em>Accepted Proposal</em>.</li>
+                                <li>View Several information from data table</li>
+                            </ul>
+                            <img src="images/proposal_report.jpg" class="img-thumbnail mb-4" alt="">
+                        </div>
+
+                        <div>
+                            <h5>Pipeline</h5>
+                            <p>
+                                View data based on how many deals are in the pipelines according to <em>Owners</em>.
+                            </p>
+                            <p>Functions that you can perform here,</p>
+                            <ul>
+                                <li>Filter data according to <em>Pipelines</em>.</li>
+                                <li>Filter data according to <em>New Deals, On Processing Deals</em> and <em>Closed Deals</em>.
+                                </li>
+                                <li>View Several information from data table</li>
+                            </ul>
+                            <img src="images/pipeline_report.jpg" class="img-thumbnail" alt="">
+                        </div>
+                    </div>
+
+                    <!--User & Roles-->
+                    <div id="userRoles" class="scrollspy-section mb-5">
+                        <h4>User & Roles</h4>
+                        <p>Create application <em>Users</em> and assign them particular <em>Roles</em> from here.</p>
+
+                        <p>Functions that you can perform here,</p>
+                        <ul>
+                            <li>Send invitations to email addresses to add them as application users.</li>
+                            <li>Filter them as <em>All Users, Active, Inactive</em> and <em>Invited</em>.</li>
+                        </ul>
+                        <img src="images/user-role.png" class="img-thumbnail" alt="">
+                    </div>
+
+                    <!--Settings-->
+                    <div id="settings" class="scrollspy-section mb-5">
+                        <h4>Settings</h4>
+                        <p>Set your various settings related to the application.</p>
+
+                        <p>Functions that you can perform here,</p>
+                        <ul>
+                            <li>
+                                Manage application General settings
+                                <img src="images/settings_general_settings.jpg" class="img-thumbnail mb-3" alt="">
+                            </li>
+                            <li>Add required <em>Custom Fields</em> for <em>Leads</em> and <em>Deals</em></li>
+                            <li>
+                                Add Email service for <em>User invitation, Sending Proposals</em> and <em>Receiving
+                                Notifications</em>
+                                <img src="images/settings_email_setup.jpg" class="img-thumbnail mb-3" alt="">
+                            </li>
+                            <li>
+                                Manage <em>Notifications</em> from Notification settings
+                                <img src="images/settings_notification.jpg" class="img-thumbnail mb-3" alt="">
+                            </li>
+                            <li>Check for newer updates and Update for <em>New Features</em> and <em>Bug fixes</em></li>
+                        </ul>
+                    </div>
+
+                    <!--Importing Guideline-->
+                    <div id="importingGuideline">
+                        <h4>Importing Guidelines</h4>
+
+                        <ul>
+                            <li>
+                                Format your CSV the same way as the sample file
+                            </li>
+                            <li>
+                                Your CSV columns should be separated by commas, not semicolons or any other characters.
+                            </li>
+                            <li>
+                                The number of columns in your CSV should be the same as the sample.
+                            </li>
+                            <li>
+                              Recommendation for importing huge data, you have to increase your server execution time and memory limit.
+                            </li>
+                            <li>
+                                Required field's column cell must not be empty.
+                            </li>
+                            <li>
+                                Lead column's cell format should be like, P: Valid_Person_Name or,
+                                O: Valid_Organization_name: Valid_Contact_Person_Name, Here O and P is
+                                for the Lead type which indicates Organization and Person respectively.
+                            </li>
+                            <li>
+                                Make sure you are importing/adding data in this sequence Lead Type,
+                                Person/Organization, Pipeline, and then Deals.
+                            </li>
+                            <li>
+                                When an error occurs download the error file and correct the incorrect cells and
+                                import that file again through .csv format.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <a class="js-page-scrolling back-to-top" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+        </a>
+
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+                crossorigin="anonymous"></script>
+        <script src="js/shCore.js" type="text/javascript"></script>
+        <script src="js/shAutoloader.js" type="text/javascript"></script>
+        <script src="js/shBrushXml.js" type="text/javascript"></script>
+        <script src="js/shBrushJScript.js" type="text/javascript"></script>
+        <script src="js/shBrushCss.js" type="text/javascript"></script>
+        <script src="js/doc.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(window).bind('scroll', function () {
+                let currentTop = $(window).scrollTop();
+
+                $('.scrollspy-section').each(function (index) {
+                    let elemTop = $(this).offset().top - 55;
+                    let elemBottom = elemTop + $(this).height();
+                    if (currentTop >= elemTop && currentTop <= elemBottom) {
+                        let id = $(this).attr('id');
+                        let navElem = $('a[href="#' + id + '"]');
+                        navElem.parent().addClass('active').siblings().removeClass('active');
+                    }
+                })
+            });
+        </script>
+    </body>
+</html>

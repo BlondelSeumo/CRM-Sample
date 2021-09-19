@@ -1,0 +1,36 @@
+{
+    "core": {
+        "min_php_version" : "7.4.0"
+    },
+
+    "permissions" : {
+        "storage/" : "775",
+        "bootstrap/cache/" : "775",
+        ".env" : "777",
+        "storage/logs/" : "777"
+    },
+
+    "requirements" : {
+        "php" : [
+            "openssl",
+            "pdo",
+            "mbstring",
+            "tokenizer",
+            "JSON",
+            "cURL",
+            "bcMath",
+            "fileinfo",
+            "XML",
+            "ctype",
+            "iconv"
+        ],
+        "apache" : [
+            "mod_rewrite"
+        ]
+    },
+
+    "final" : {
+        "key" : true,
+        "publish" : false
+    }
+}
